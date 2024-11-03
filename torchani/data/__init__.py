@@ -182,7 +182,7 @@ class Transformations:
                 species = d['species']
                 count = Counter()
                 for s in species:
-                    count[s] += 1
+                    count[s.decode('utf-8')] += 1
                 for s, c in count.items():
                     if s not in counts:
                         counts[s] = [0] * n
